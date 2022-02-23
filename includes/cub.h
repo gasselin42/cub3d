@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 09:42:01 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/23 11:54:03 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/23 14:31:50 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ typedef struct s_cub {
 	void	*mlx;
 	void	*win;
 
+	int		fd;
+
 	char	*textN;
 	char	*textS;
 	char	*textE;
@@ -60,10 +62,14 @@ typedef struct s_cub {
 	t_img	*img[2];
 
 	char	**map;
+	char	tmp_map[1024][1024];
 }	t_cub;
 
 void	start_parsing(t_cub *cub, char *path);
+int		fill_map(t_cub *cub, char *line);
 
 int		get_next_line(int fd, char **line);
+
+int		create_rgb(int r, int g, int b);
 
 #endif

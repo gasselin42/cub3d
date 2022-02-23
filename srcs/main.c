@@ -6,16 +6,16 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 09:41:16 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/23 11:48:26 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/23 15:02:54 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/cub.h"
 
-// int	create_trgb(int r, int g, int b)
-// {
-// 	return (r << 16 | g << 8 | b);
-// }
+int	create_rgb(int r, int g, int b)
+{
+	return (r << 16 | g << 8 | b);
+}
 
 void	init_cub(t_cub *cub)
 {
@@ -35,5 +35,14 @@ int	main(int argc, char **argv)
 		return (printf("Error : Bad arguments!\n"));
 	init_cub(&cub);
 	start_parsing(&cub, argv[1]);
+
+	// printf("%s\n", cub.textN);
+	// printf("%s\n", cub.textS);
+	// printf("%s\n", cub.textE);
+	// printf("%s\n", cub.textW);
+
+	// printf("%d = %d\n", create_rgb(220,100,0), cub.floor);
+	// printf("%d = %d\n", create_rgb(225,30,0), cub.ceiling);
+	
 	return (0);
 }
