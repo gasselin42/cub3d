@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 09:41:16 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/24 10:10:54 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/24 10:23:26 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	verify_all(t_cub *cub)
 	{
 		free_textures(cub);
 		ft_strarr_free(cub->tmp_map);
-		exit (printf("Error : Missing parameter\n"));
+		exit (printf(MISSING_PARAM));
 	}
 }
 
@@ -55,7 +55,7 @@ int	main(int argc, char **argv)
 	t_cub	cub;
 	
 	if (argc != 2)
-		return (printf("Error : Bad arguments!\n"));
+		return (printf(ERR_ARG_MAIN));
 	init_cub(&cub);
 	start_parsing(&cub, argv[1]);
 	verify_all(&cub);

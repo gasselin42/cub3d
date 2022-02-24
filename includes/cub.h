@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 09:42:01 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/24 10:11:32 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/24 10:17:36 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@
 
 # include "../mlx_mac/mlx.h"
 # include "../libft/libft.h"
+
+# include "./error_msg.h"
 
 # define WINH 1000
 # define WINW 1000

@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 14:28:44 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/24 09:16:10 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/24 10:27:39 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ int	check_remaining_lines(t_cub *cub)
 		if (split[0])
 		{
 			ft_strarr_free(split);
-			return (printf("Error : Map must be last in file\n"));
+			return (printf(MAP_LAST));
 		}
 		ft_strarr_free(split);
 		if (ret == 0)

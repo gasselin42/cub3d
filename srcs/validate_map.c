@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:00:30 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/24 10:12:23 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/24 10:29:38 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ int find_spawn(t_cub *cub, size_t len)
             if (cub->map[i][j] == 'N' || cub->map[i][j] == 'S'
                 || cub->map[i][j] == 'E' || cub->map[i][j] == 'W')
                 if (set_spawn_point(cub, i, j))
-                    return (printf("Error : Multiple spawn points\n"));
+                    return (printf(MULT_SPAWNS));
             j++;
         }
         i++;
     }
     if (cub->player_rot == -1.0)
-        return (printf("Error : No spawn point set\n"));
+        return (printf(NO_SPAWN));
     return (0);
 }
 
@@ -66,14 +66,14 @@ int check_surroundings(char **map, int i, int j)
         || (map[i + 1][j + 1] != '1' && map[i + 1][j + 1] != ' ')
         || (map[i][j + 1] != '1' && map[i][j + 1] != ' ')
         || (map[i - 1][j + 1] != '1' && map[i - 1][j + 1] != ' '))
-        return (printf("Error : Map is not closed by walls on all sides\n"));
+        return (printf(CLOSED_MAP));
     return (0);
 }
 
 int verify_line(char *line, size_t len)
 {
     if (ft_count_char(line, "1 ") != (int)len)
-        return (printf("Error : Map is not closed by walls on all sides\n"));
+        return (printf(CLOSED_MAP));
     return (0);
 }
 
@@ -85,7 +85,7 @@ int verify_column(char **map, size_t index)
     while (i < ft_strarr_size(map))
     {
         if (map[i][index] != '1' && map[i][index] != ' ')
-            return (printf("Error : Map is not closed by walls on all sides\n"));
+            return (printf(CLOSED_MAP));
         i++;
     }
     return (0);
