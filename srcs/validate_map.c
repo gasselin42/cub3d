@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 09:00:30 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/24 10:06:14 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/24 10:12:23 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,9 +84,8 @@ int verify_column(char **map, size_t index)
     i = 0;
     while (i < ft_strarr_size(map))
     {
-        if (map[i][index] != '1' || map[i][index] != ' ')
-            return (printf("Error : Map is not closed\
-             by walls on all sides\n"));
+        if (map[i][index] != '1' && map[i][index] != ' ')
+            return (printf("Error : Map is not closed by walls on all sides\n"));
         i++;
     }
     return (0);

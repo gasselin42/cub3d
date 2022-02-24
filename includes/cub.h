@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 09:42:01 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/24 10:00:08 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/24 10:11:32 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ typedef struct s_cub {
 void	start_parsing(t_cub *cub, char *path);
 int		fill_map(t_cub *cub, char *line);
 void	transfer_map(t_cub *cub);
+void    validate_map(t_cub *cub);
 
 int		get_next_line(int fd, char **line);
 
