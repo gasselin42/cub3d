@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 10:18:21 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/23 16:04:36 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/24 08:58:32 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 bool	line_is_map(char **split)
 {
-	if (ft_strcmp(split[0], "NO") && ft_strcmp(split[0], "SO")
-		&& ft_strcmp(split[0], "EA") && ft_strcmp(split[0], "WE")
-		&& ft_strcmp(split[0], "C") && ft_strcmp(split[0], "F"))
+	if (split[0] && (split[0][0] == '0' || split[0][0] == '1'))
 		return (true);
 	return (false);
 }

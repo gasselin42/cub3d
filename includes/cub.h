@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 09:42:01 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/23 16:15:40 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/24 10:00:08 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,10 @@ typedef struct s_cub {
 
 	char	**map;
 	char	**tmp_map;
+
+	double	player_rot;
+	int		posX;
+	int		posY;
 }	t_cub;
 
 void	start_parsing(t_cub *cub, char *path);
@@ -72,5 +76,7 @@ void	transfer_map(t_cub *cub);
 int		get_next_line(int fd, char **line);
 
 int		create_rgb(int r, int g, int b);
+
+void	free_textures(t_cub *cub);
 
 #endif

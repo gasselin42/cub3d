@@ -6,7 +6,7 @@
 /*   By: gasselin <gasselin@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 14:28:44 by gasselin          #+#    #+#             */
-/*   Updated: 2022/02/23 16:43:21 by gasselin         ###   ########.fr       */
+/*   Updated: 2022/02/24 09:16:10 by gasselin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	transfer_map(t_cub *cub)
 		i++;
 	}
 	fill_lines(cub, len);
+	ft_strarr_free(cub->tmp_map);
 }
 
 int	check_remaining_lines(t_cub *cub)
